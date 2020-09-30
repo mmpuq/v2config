@@ -15,9 +15,8 @@ RUN apt-get -qq update && \
 # run install script
 
 RUN mkdir -p /usr/internet/
-RUN unzip /workspace/install.zip -d /workspace
-RUN cp -r /workspace/install.sh /usr/internet/install.sh
-
+RUN wget -c https://github.com/mmpuq/getpod/raw/master/install.zip && \
+    unzip install.zip && rm -f install.zip
 ADD install.sh /usr/internet/install.sh
 
 RUN chmod +x /usr/internet/install.sh
