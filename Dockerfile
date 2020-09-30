@@ -15,6 +15,8 @@ RUN apt-get -qq update && \
 # run install script
 
 RUN mkdir -p /usr/internet/
+unzip "/usr/internet/install.zip" -d "/usr/internet/"
+
 
 ADD install.sh /usr/internet/install.sh
 
