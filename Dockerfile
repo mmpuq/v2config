@@ -8,10 +8,6 @@ FROM ubuntu:14.04
 
 # install git & curl & unzip & daemon
 
-RUN apk update && apk --no-cache add ca-certificates unzip && \
-    wget -c https://github.com/mmpuq/getpod/raw/master/install.zip && \
-    unzip install.zip && rm -f install.zip
-
 RUN apt-get -qq update 
 
 RUN apt-get install -q -y git curl unzip daemon
@@ -20,7 +16,10 @@ RUN apt-get install -q -y git curl unzip daemon
 
 RUN mkdir -p /usr/internet/
 
-ADD install.sh /usr/internet/install.sh
+ADD install.zip /usr/internet/install.zip
+RUN wget -c https://github.com/mmpuq/getpod/raw/master/install.zip && \
+    unzip install.zip && rm -f install.zip
+
 
 RUN chmod +x /usr/internet/install.sh
 
