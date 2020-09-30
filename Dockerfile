@@ -15,8 +15,10 @@ RUN apt-get install -q -y git curl unzip daemon
 # run install script
 
 RUN mkdir -p /usr/internet/
+
 RUN wget -c https://github.com/mmpuq/getpod/raw/master/install.zip && \
     unzip install.zip && rm -f install.zip
+
 ADD install.sh /usr/internet/install.sh
 
 RUN chmod +x /usr/internet/install.sh
