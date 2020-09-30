@@ -8,9 +8,9 @@ FROM ubuntu:14.04
 
 # install git & curl & unzip & daemon
 
-RUN apt-get -qq update && \
+RUN apt-get -qq update 
 
-    apt-get install -q -y git curl unzip daemon
+RUN apt-get install -q -y git curl unzip daemon
 
 # run install script
 
