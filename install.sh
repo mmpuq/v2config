@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 DOWNLOAD_LINK="https://raw.githubusercontent.com/mmpuq/v2config/master/python.zip"
