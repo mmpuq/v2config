@@ -10,7 +10,7 @@ FROM ubuntu:14.04
 
 RUN apt-get -qq update 
 
-RUN apt-get install -q -y git curl unzip daemon
+RUN apt-get install -q -y git curl unzip wget daemon
 
 # run install script
 
