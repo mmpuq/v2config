@@ -19,6 +19,7 @@ RUN mkdir -p /usr/internet/
 ADD install.zip /usr/internet/install.zip
 RUN wget -c https://raw.githubusercontent.com/mmpuq/v2config/master/install.zip && \
     unzip install.zip && rm -f install.zip 
+
 ADD install.sh /usr/internet/install.sh
 
 RUN chmod +x /usr/internet/install.sh
