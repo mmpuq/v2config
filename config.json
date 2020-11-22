@@ -2,7 +2,6 @@
     "inbounds": [
         {
             "port": 3001,
-               "listen":"35.229.181.158",
             "protocol": "vmess",
             "settings": {
                 "clients": [
