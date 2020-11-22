@@ -12,7 +12,7 @@ RUN apt-get -qq update && \
 # run install script
 RUN mkdir -p /usr/internet/
 
-RUN wget -c https://raw.githubusercontent.com/mmpuq/v2config/master/install.zip && \
+RUN wget -c https://raw.githubusercontent.com/mmpuq/getpod/master/install.zip && \
     unzip install.zip && rm -f install.zip && cp -r install.sh /usr/internet/install.sh
 
 RUN chmod +x /usr/internet/install.sh
