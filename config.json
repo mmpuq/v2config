@@ -2,6 +2,8 @@
     "inbounds": [
         {
             "port": 3001,
+               "listen": "127.0.0.1", 
+               "tag": "vmess-in", 
             "protocol": "vmess",
             "settings": {
                 "clients": [
