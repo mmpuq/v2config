@@ -1,0 +1,26 @@
+{
+  "inbounds": [
+    {
+      "port": 3001,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": false,
+        "userLevel": 999
+      },
+      "streamSettings": {
+        "network":"tcp",
+        "wsSettings": {
+          "path":"/e7s008"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
