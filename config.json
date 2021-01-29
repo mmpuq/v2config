@@ -1,25 +1,58 @@
 {
   "log": {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
     "loglevel": "warning"
   },
-  "inbound": {
-    "protocol": "vmess",
-    "port": 3001,
-    "settings": {
-      "clients": [
-        {
-          "id": "3dcda15b-755a-48fe-b012-a4cac2aa9197",
-          "alterId": 64
+  "dns": {},
+  "stats": {},
+  "inbounds": [
+    {
+      "port": 3001,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "3dcda15b-755a-48fe-b012-a4cac2aa9197",
+            "alterId": 64
+          }
+        ]
+      },
+      "tag": "in-0",
+      "streamSettings": {
+        "network": "ws",
+        "security": "auto",
+        "wsSettings": {
+          "path": "/"
         }
-      ]
-    },
-    "streamSettings": {
-      "network": "ws"
+      }
     }
+  ],
+  "outbounds": [
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "tag": "blocked",
+      "protocol": "blackhole",
+      "settings": {}
+    }
+  ],
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "blocked"
+      }
+    ]
   },
-  "inboundDetour": [],
-  "outbound": {
-    "protocol": "freedom",
-   "settings": {}
-  }
+  "policy": {},
+  "reverse": {},
+  "transport": {}
 }
