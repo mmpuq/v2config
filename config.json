@@ -1,0 +1,22 @@
+{
+    "inbounds": [
+        {
+            "port": 3001,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "3dcda15b-755a-48fe-b012-a4cac2aa9197"
+                    }
+                ]
+            },
+            "streamSettings": {"network": "ws","wsSettings": {"path": "/"}}
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom"
+        },
+    ],
+    
+}
